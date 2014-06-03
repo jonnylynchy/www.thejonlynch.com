@@ -50,7 +50,7 @@ header section a{
 	padding:10px 0;
 	font-family: 'Advent Pro', sans-serif;
 	font-weight: 300;
-	font-size:35px;
+	font-size:2.5em;
 	color:#747474;
 	top: 0;
 	position: absolute;
@@ -70,7 +70,7 @@ header a:active, header a.active{
 header nav{
 	text-align: right;
 	font-family: 'Advent Pro', sans-serif;
-	font-size: 18pt;
+	font-size: 1.7em;
 	margin-top:35px;
 }
 
