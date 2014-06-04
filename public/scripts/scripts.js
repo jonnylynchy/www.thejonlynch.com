@@ -15,11 +15,8 @@ var adjustment = 85;
     // Set up animations for portfolio
     setPortfolioAnimations();
 
-    // Portfolio Links
-    $('#portfolio li').click(function(){
-      // console.log("hello");
-      $("#myModal").reveal();
-    });
+    // Featured slider
+    $('#featured').orbit({ fluid: '16x6', captions: true, timer: true }); 
   });
 
 	// Nav animation
@@ -52,10 +49,7 @@ var adjustment = 85;
     var left = $(activeNavItem).offset().left - $('header .row')[0].offsetLeft;
     navAnim.stopAnim = false
     navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
-  });
-
-  // Featured slider
-  $('#featured').orbit({ fluid: '16x6', captions: true, timer: true });  
+  }); 
 
   // Tweet :)
   $("#latestTweet .tweet").tweet({

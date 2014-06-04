@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/foundation.min.css" />
 	<link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/mediaOverrides.css" />
@@ -14,7 +15,7 @@
 	<![endif]-->
 </head>
 
-<body name="home">
+<body name="home" ng-controller="PortfolioController">
 	<!-- Top/Header Area -->
 	<header>
 		<div id="headerBG"></div>
@@ -45,10 +46,7 @@
 				<div class="seven columns">
 					<div class="container">
 						<div id="featured">
-						  <img src="images/work/small/aetna_mobile.png">
-		  				<img src="images/work/small/kpmg_dashboard.png">
-		  				<img src="images/work/small/kpmg_criteria_builder.png">
-		  				<img src="images/work/small/kpmg_mobile.png">
+						  <img ng-repeat="case in portfolio.cases" ng-src="{{case.smallImageUrl}}" alt="{{case.name}}">
 						</div>
 					</div>
 				</div>
@@ -108,42 +106,12 @@
 		<div class="row">
 			<div class="twelve columns centered">
 				<h3>Click on one of the examples below to view details.</h3>
-				<div  style="margin-top: 60px;">
-				<ul id="portfolio" ng-controller="PortfolioController">
-					<li ng-repeat="case in portfolio.cases">
+				<ul id="portfolio">
+					<li ng-repeat="case in portfolio.cases" ng-click="changeModal(case)">
 						<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
 						<span>{{case.name}}</span>
 					</li>
 				</ul>
-				</div>
-			
-				<!-- <ul id="portfolio">
-					<li>
-						<div><img src="images/work/small/aetna_mobile.png"></div>
-						<span>Aetna Mobile App</span>
-					</li>
-					<li>
-						<div><img src="images/work/small/kpmg_dashboard.png"></div>
-						<span>KPMG Tax Dashboard</span>
-					</li>
-					<li>
-						<div><img src="images/work/small/kpmg_mobile.png"></div>
-						<span>KPMG Mobile</span>
-					</li>
-					<li>
-						<div><img src="images/work/small/kpmg_criteria_builder.png"></div>
-						<span>KPMG Criteria Builder</span>
-					</li>
-					<li>
-						<div><img src="images/work/small/adshuffle.png"></div>
-						<span>AdShuffle</span>
-					</li>
-					<li>
-						<div><img src="images/work/small/true.com.jpg"></div>
-						<span>TrueBeginnings.com (formerly True.com)</span>
-					</li>
-				</ul> -->
-			
 		</div>
 	</section>
 
@@ -163,7 +131,7 @@
 			</div>
 		</div>
 	</section>
-
+	
 	<!-- Footer -->
 	<footer>
 		<div class="row">
@@ -175,9 +143,9 @@
 					</div>
 					<div class="right">
 						<h5 class="subheader">
-							<i class="fa fa-twitter-square fa-2x"></i> &nbsp;
-							<i class="fa fa-github fa-2x"></i> &nbsp;
-							<i class="fa fa-linkedin-square fa-2x"></i>
+							<a href="http://www.linkedin.com/in/jonclynch/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>&nbsp;
+							<a href="https://github.com/jonnylynchy" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp;
+							<a href="https://twitter.com/jonlynch" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>&nbsp;
 						</h5>
 					</div>
 					<div class="clear"></div>
@@ -187,20 +155,31 @@
 		</div>
 	</footer>
 	
-	<div id="myModal" class="reveal-modal xlarge">
+	<div id="caseModal" class="reveal-modal xlarge" ng-model="selectedCase">
 	  <div class="row">
-	  	<div class="seven columns">
-	  		<h3>Aetna Trip Mobile App</h3>
-	  		<p>This project was built using Javascript, HTML5, CSS3 in the Sencha Touch 2.x framework.</p>
-	  		<p>My role was to plan, and design the front-end based on requirements from the client. This was an agile team and effort.</p>
+	  	<div class="twelve columns">
+	  		<h3>{{selectedCase.name}}</h3>
+	  		<p>
+	  			{{selectedCase.description}}
+	  			<div ng-switch="selectedCase.url">
+					  <span ng-switch-when="blank">Since this project is private and restricted from external users, viewing isn't available.</span>
+					  <span ng-switch-default><a href="{{selectedCase.url}}" target="_blank">{{selectedCase.name}}</a></span>
+					</div>
+	  		</p>
+
+	  		<h4>Technologies Used:</h4>
+	  		<ul>
+					<li ng-repeat="tech in selectedCase.technologies">{{tech}}</li>
+	  		</ul>
 	  	</div>
-	  	<div class="five columns centered">
-	  		<img src="images/work/full/aetna_mobile_1.png">
+	  	<div class="twelve columns centered">
+	  		<hr />
+	  		<img ng-src="{{selectedCase.largeImageUrl}}" alt="{{case.name}}">
 	  	</div>
 	  </div>
 	  <a class="close-reveal-modal"><i class="fa fa-times"></i></a>
 	</div>
-
+	
 	<!-- JS Libraries -->
 	<script src="scripts/vendor/jquery.js"></script>
 	<script src="scripts/vendor/jquery.visible.js"></script>
