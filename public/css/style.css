@@ -458,6 +458,9 @@ footer i:hover{
 	color:#07e0f1;
 }
 
+div.timer, .orbit .timer{
+	display: none !important;
+}
 
 .follow{
 	cursor: pointer;

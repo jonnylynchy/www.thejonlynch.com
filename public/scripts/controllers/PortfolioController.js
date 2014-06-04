@@ -47,10 +47,10 @@ portfolioApp.controller('PortfolioController',
                 },
                 {
                     name: 'TrueBeginnings.com (formerly True.com)',
-                    smallImageUrl: 'images/work/small/true.com.jpg',
+                    smallImageUrl: 'images/work/small/true.com.png',
                     largeImageUrl: 'images/work/full/true.com.jpg',
                     technologies: ['ASP.NET C# and VB.NET', 'HTML', 'CSS', 'Flash', 'Javascript'],
-                    description: 'True.com was a pioneer in the online dating industry being the first to bring full background checks online, and multi-user flash chat. During my time at True.com (H.D. Vest), I helped develop the front-end of their dating website including a their multi-user flash chatrooms using Flash Communication Server, Javascript and Flash.',
+                    description: 'True.com was a pioneer in the online dating industry being the first to bring full background checks online, and multi-user flash chat. During my time at True.com (H.D. Vest), I helped develop the front-end of their dating website including multi-user flash video chatrooms using Flash Communication Server, Javascript and Flash.',
                     url:'http://www.TrueBeginnings.com'
                 }
             ]
