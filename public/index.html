@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="portfolioApp">
 <head>
 	<meta charset="utf-8" />
 	<title>Jon Lynch - Human Being, Developer, Lover of Digital Things</title>
@@ -45,10 +45,10 @@
 				<div class="seven columns">
 					<div class="container">
 						<div id="featured">
-						  <img src="images/work/aetna_mobile.png">
-		  				<img src="images/work/kpmg_dashboard.png">
-		  				<img src="images/work/kpmg_criteria_builder.png">
-		  				<img src="images/work/kpmg_mobile.png">
+						  <img src="images/work/small/aetna_mobile.png">
+		  				<img src="images/work/small/kpmg_dashboard.png">
+		  				<img src="images/work/small/kpmg_criteria_builder.png">
+		  				<img src="images/work/small/kpmg_mobile.png">
 						</div>
 					</div>
 				</div>
@@ -108,33 +108,42 @@
 		<div class="row">
 			<div class="twelve columns centered">
 				<h3>Click on one of the examples below to view details.</h3>
-				<ul id="portfolio">
+				<div  style="margin-top: 60px;">
+				<ul id="portfolio" ng-controller="PortfolioController">
+					<li ng-repeat="case in portfolio.cases">
+						<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
+						<span>{{case.name}}</span>
+					</li>
+				</ul>
+				</div>
+			
+				<!-- <ul id="portfolio">
 					<li>
-						<div><img src="images/work/aetna_mobile.png"></div>
+						<div><img src="images/work/small/aetna_mobile.png"></div>
 						<span>Aetna Mobile App</span>
 					</li>
 					<li>
-						<div><img src="images/work/kpmg_dashboard.png"></div>
+						<div><img src="images/work/small/kpmg_dashboard.png"></div>
 						<span>KPMG Tax Dashboard</span>
 					</li>
 					<li>
-						<div><img src="images/work/kpmg_mobile.png"></div>
+						<div><img src="images/work/small/kpmg_mobile.png"></div>
 						<span>KPMG Mobile</span>
 					</li>
 					<li>
-						<div><img src="images/work/kpmg_criteria_builder.png"></div>
+						<div><img src="images/work/small/kpmg_criteria_builder.png"></div>
 						<span>KPMG Criteria Builder</span>
 					</li>
 					<li>
-						<div><img src="images/work/adshuffle.png"></div>
+						<div><img src="images/work/small/adshuffle.png"></div>
 						<span>AdShuffle</span>
 					</li>
 					<li>
-						<div><img src="images/work/true.com.jpg"></div>
+						<div><img src="images/work/small/true.com.jpg"></div>
 						<span>TrueBeginnings.com (formerly True.com)</span>
 					</li>
-				</ul>
-			</div>
+				</ul> -->
+			
 		</div>
 	</section>
 
@@ -186,24 +195,28 @@
 	  		<p>My role was to plan, and design the front-end based on requirements from the client. This was an agile team and effort.</p>
 	  	</div>
 	  	<div class="five columns centered">
-	  		<img src="images/work/aetna_mobile_1_lg.png">
+	  		<img src="images/work/full/aetna_mobile_1.png">
 	  	</div>
 	  </div>
 	  <a class="close-reveal-modal"><i class="fa fa-times"></i></a>
 	</div>
 
 	<!-- JS Libraries -->
-	<script src="scripts/jquery.js"></script>
-	<script src="scripts/jquery.visible.js"></script>
-	<script src="scripts/jquery.foundation.forms.js"></script>
-	<script src="scripts/jquery.foundation.mediaQueryToggle.js"></script>
-	<script src="scripts/jquery.foundation.orbit.js"></script>
-	<script src="scripts/jquery.foundation.reveal.js"></script>
-	<script src="scripts/jquery.tweet.js"></script>
+	<script src="scripts/vendor/jquery.js"></script>
+	<script src="scripts/vendor/jquery.visible.js"></script>
+	<script src="scripts/vendor/jquery.foundation.forms.js"></script>
+	<script src="scripts/vendor/jquery.foundation.mediaQueryToggle.js"></script>
+	<script src="scripts/vendor/jquery.foundation.orbit.js"></script>
+	<script src="scripts/vendor/jquery.foundation.reveal.js"></script>
+	<script src="scripts/vendor/jquery.tweet.js"></script>
+	<script src="scripts/vendor/angular.min.js"></script>
 	<!-- Local scripts -->
 	<script src="scripts/fonts.js"></script>
 	<script src="scripts/libs.js"></script>
 	<script src="scripts/CanvasNavAnimation.js"></script>
 	<script src="scripts/scripts.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/controllers/PortfolioController.js"></script>
+	
 </body>
 </html>

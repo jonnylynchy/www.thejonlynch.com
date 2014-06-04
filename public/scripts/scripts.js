@@ -1,7 +1,5 @@
 var adjustment = 85;
 (function($){
-  // Set up animations for portfolio
-  //setPortfolioAnimations();
 
 	// Init Canvas Animation
 	window.navAnim = new CanvasNavAnimation("navCanvas");
@@ -14,6 +12,14 @@ var adjustment = 85;
     navAnim.stopAnim = false
     setTimeout(function(){navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);}, 800)
     $(firstItem).addClass('active');
+    // Set up animations for portfolio
+    setPortfolioAnimations();
+
+    // Portfolio Links
+    $('#portfolio li').click(function(){
+      // console.log("hello");
+      $("#myModal").reveal();
+    });
   });
 
 	// Nav animation
@@ -50,12 +56,6 @@ var adjustment = 85;
 
   // Featured slider
   $('#featured').orbit({ fluid: '16x6', captions: true, timer: true });  
-
-  // Portfolio Links
-  $('#portfolio li').click(function(){
-    // console.log("hello");
-    $("#myModal").reveal();
-  })
 
   // Tweet :)
   $("#latestTweet .tweet").tweet({
