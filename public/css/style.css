@@ -400,6 +400,16 @@ section #bottom .blogBlurb{
 	font-family: 'Century Gothic', 'Oxygen', 'Arial', sans-serif;
 }
 
+/* footer */
+footer i{
+	color:#ccc;
+}
+
+footer i:hover{
+	color:#07e0f1;
+	cursor: pointer;
+}
+
 /* Foundation Modal Overrides */
 .reveal-modal{
 	z-index:103;
@@ -428,11 +438,6 @@ section #bottom .blogBlurb{
 
 .follow{
 	cursor: pointer;
-}
-
-/* footer */
-footer {
-	
 }
 
 /* general styles */
