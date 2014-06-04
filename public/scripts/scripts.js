@@ -39,6 +39,15 @@ var adjustment = 85;
     
   });
 
+  // If resize, re-size, position and animate the bar
+  $(window).resize(function(){
+    var activeNavItem = $('header a.active');
+    var itemWidth = $(activeNavItem)[0].clientWidth;
+    var left = $(activeNavItem).offset().left - $('header .row')[0].offsetLeft;
+    navAnim.stopAnim = false
+    navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
+  });
+
   // Featured slider
   $('#featured').orbit({ fluid: '16x6', captions: true, timer: true });  
 
