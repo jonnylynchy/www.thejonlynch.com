@@ -95,8 +95,10 @@ setPortfolioAnimations = function(){
 
 function resizeNavAnimation() {
   var activeNavItem = $('header a.active');
-  var itemWidth = $(activeNavItem)[0].clientWidth;
-  var left = $(activeNavItem).offset().left - $('header .row')[0].offsetLeft;
-  navAnim.stopAnim = false;
-  navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
+  if(activeNavItem.length){
+    var itemWidth = $(activeNavItem)[0].clientWidth;
+    var left = $(activeNavItem).offset().left - $('header .row')[0].offsetLeft;
+    navAnim.stopAnim = false;
+    navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);  
+  }
 };
