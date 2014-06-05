@@ -43,13 +43,11 @@ var adjustment = 85;
   });
 
   // If resize, re-size, position and animate the bar
-  $(window).resize(function(){
-    var activeNavItem = $('header a.active');
-    var itemWidth = $(activeNavItem)[0].clientWidth;
-    var left = $(activeNavItem).offset().left - $('header .row')[0].offsetLeft;
-    navAnim.stopAnim = false
-    navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
-  }); 
+  var resizeTimer;
+  $(window).bind('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resizeNavAnimation, 100);
+  });
 
   // Tweet :)
   $("#latestTweet .tweet").tweet({
@@ -94,3 +92,11 @@ setPortfolioAnimations = function(){
     
   });
 }
+
+function resizeNavAnimation() {
+  var activeNavItem = $('header a.active');
+  var itemWidth = $(activeNavItem)[0].clientWidth;
+  var left = $(activeNavItem).offset().left - $('header .row')[0].offsetLeft;
+  navAnim.stopAnim = false;
+  navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
+};
