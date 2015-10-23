@@ -14,7 +14,7 @@ var adjustment = 85;
     $(firstItem).addClass('active');
     // Set up animations for portfolio
     setPortfolioAnimations();
-
+    //setScrollNavPosition();
     // Featured slider
     $('#featured').orbit({ fluid: '16x6', captions: true, timer: true }); 
   });
@@ -24,7 +24,7 @@ var adjustment = 85;
     $('header a').removeClass('active');
   	var itemWidth = $(this)[0].clientWidth;
     var left = $(this).offset().left - $('header .row')[0].offsetLeft;
-    navAnim.stopAnim = false
+    navAnim.stopAnim = false;
     navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
     $(this).addClass('active');
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
@@ -71,8 +71,8 @@ var adjustment = 85;
 })(jQuery);
 
 setPortfolioAnimations = function(){
-  var win = $(window);
-  var allMods = $('#portfolio li');
+  var win = $(window),
+      allMods = $('#portfolio li');      
 
   allMods.each(function(i, el) {
     var el = $(el);
@@ -86,6 +86,30 @@ setPortfolioAnimations = function(){
       var el = $(el);
       if (el.visible(true)) {
         el.addClass("come-in"); 
+      } 
+    });
+  });
+}
+
+setScrollNavPosition = function() {
+  var win = $(window),
+      sections = $('section[name]');
+
+  win.scroll(function(event) {
+    sections.each(function(i, el) {
+      var el = $(el),
+          activeNav = "",
+          itemWidth = 0,
+          left = 0;
+
+      if (el.visible(true)) {
+        activeNav = $('header a[href="#' + el.attr('name') + '"]');
+        itemWidth = activeNav[0].clientWidth;
+        left = activeNav.offset().left - $('header .row')[0].offsetLeft;
+        $('header a').removeClass('active');
+        navAnim.stopAnim = false;
+        navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
+        activeNav.addClass('active');
       } 
     });
   });

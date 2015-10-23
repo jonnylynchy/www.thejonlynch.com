@@ -298,6 +298,10 @@ section h3, section h4{
 	color:#333;
 }
 
+section[name="about"] h3{
+	color: #fff;
+}
+
 section ul li{
 	font-size:1.2em;
 }

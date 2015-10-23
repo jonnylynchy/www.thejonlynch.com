@@ -1,5 +1,5 @@
 // A fun little experiement with canvas to implement an animated bar with active nav item - JL
-// This is prototypical JS, but I usually use the repository pattern.
+// This is prototyal JS, but I usually use the repository pattern.
 
 window.requestAnimFrame = (function(callback) {
   return window.requestAnimationFrame || 
