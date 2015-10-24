@@ -216,6 +216,23 @@ section[name=life]{
   margin-right: 0;
 }
 
+.show-for-small #portfolio li{
+	width: auto;
+	min-height: 200px;
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+	float:none;
+}
+
+.show-for-small #portfolio li div{
+	max-height: 480px;
+}
+
+.show-for-small #portfolio li img{
+	max-width: none;
+}
+
 #caseModal img{
 	min-width: 400px;
 }
@@ -275,8 +292,8 @@ section[name=life]{
 
 
 section .row .columns .container {
-	height: 242px !important; 
-	width: 494px !important;
+	height: 242px; 
+	max-width: 494px;
 	overflow: hidden;
 	/*border: 1px solid #333;*/
 	/*-moz-box-shadow: 5px 5px 3px #e5e5e5;

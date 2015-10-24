@@ -126,14 +126,27 @@
 
 	<section name="work">
 		<div class="row">
-			<div class="twelve columns centered">
-				<h3>Unfortunately, due to confidentiality restrictions, I am unable to show much of my work here. Contact me personally if you would like to know/see more, otherwise click on one of the examples below to view details.</h3>
-				<ul id="portfolio">
-					<li ng-repeat="case in portfolio.cases" ng-click="changeModal(case)">
-						<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
-						<span>{{case.name}}</span>
-					</li>
-				</ul>
+			<div class="hide-for-small">
+				<div class="twelve columns centered">
+					<h3>Unfortunately, due to confidentiality restrictions, I am unable to show much of my work here. Contact me personally if you would like to know/see more, otherwise click on one of the examples below to view details.</h3>
+					<ul id="portfolio">
+						<li ng-repeat="case in portfolio.cases" ng-click="changeModal(case)">
+							<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
+							<span>{{case.name}}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="show-for-small">
+				<div class="mobile-four columns centered">
+					<h3>Unfortunately, due to confidentiality restrictions, I am unable to show much of my work here. Contact me personally if you would like to know/see more, otherwise click on one of the examples below to view details.</h3>
+					<ul id="portfolio">
+						<li ng-repeat="case in portfolio.cases" ng-click="changeModal(case)" class="centered">
+							<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
+							<span>{{case.name}}</span>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
