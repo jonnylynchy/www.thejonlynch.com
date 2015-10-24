@@ -18,8 +18,8 @@
 
     $(firstItem).addClass('active');
 
-    // Set up animations for portfolio
-    setPortfolioAnimations();
+    // Set up animations for portfolio and logo
+    setAnimations();
 
     //setScrollNavPosition();
     // Featured slider
@@ -81,9 +81,10 @@
 
 })(window, jQuery);
 
-setPortfolioAnimations = function(){
+setAnimations = function(){
   var win = $(window),
-      allMods = $('#portfolio li');      
+      allMods = $('#portfolio li'),
+      logoDiv = $('section#logo div');
 
   allMods.each(function(i, el) {
     var el = $(el);
@@ -93,6 +94,11 @@ setPortfolioAnimations = function(){
   });
 
   win.scroll(function(event) {
+    if(window.scrollY > 50){
+      logoDiv.addClass('small');
+    } else {
+      logoDiv.removeClass('small');
+    }
     allMods.each(function(i, el) {
       var el = $(el);
       if (el.visible(true)) {
