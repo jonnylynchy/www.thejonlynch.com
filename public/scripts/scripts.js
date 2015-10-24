@@ -1,5 +1,5 @@
-var adjustment = 85;
-(function($){
+(function(window, $){
+  var adjustment = 85;
 
 	// Init Canvas Animation
 	window.navAnim = new CanvasNavAnimation("navCanvas");
@@ -9,11 +9,18 @@ var adjustment = 85;
     var firstItem = $('#firstNavItem');
     var itemWidth = $(firstItem)[0].clientWidth;
     var left = $(firstItem).offset().left - $('header .row')[0].offsetLeft;
-    navAnim.stopAnim = false
-    setTimeout(function(){navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);}, 800)
+    
+    navAnim.stopAnim = false;
+    
+    setTimeout(function(){
+        navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
+    }, 800);
+
     $(firstItem).addClass('active');
+
     // Set up animations for portfolio
     setPortfolioAnimations();
+
     //setScrollNavPosition();
     // Featured slider
     $('#featured').orbit({ fluid: '16x6', captions: true, timer: true }); 
@@ -32,8 +39,12 @@ var adjustment = 85;
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
+          var topPosition = target.offset().top - adjustment;
+          if($(this).attr('href').indexOf('home') > -1){
+            topPosition = 0;
+          }
           $('html,body').animate({
-             scrollTop: target.offset().top - adjustment
+             scrollTop: topPosition
           }, 600,function(){}
         );
         return false;
@@ -68,7 +79,7 @@ var adjustment = 85;
     window.open('http://twitter.com/jonlynch');
   });
 
-})(jQuery);
+})(window, jQuery);
 
 setPortfolioAnimations = function(){
   var win = $(window),

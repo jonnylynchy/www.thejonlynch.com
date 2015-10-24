@@ -1,5 +1,4 @@
 // A fun little experiement with canvas to implement an animated bar with active nav item - JL
-// This is prototyal JS, but I usually use the repository pattern.
 
 window.requestAnimFrame = (function(callback) {
   return window.requestAnimationFrame || 
@@ -25,7 +24,7 @@ var CanvasNavAnimation = function(canvasElement){
   this.toWidth = 0;
   this.toHeight = 5;
   this.speed = 5;
-  this.barHeight = 2;
+  this.barHeight = 3;
   this.barWidth = 50;
   this.rectX = 0;
   this.rectY = 0;
