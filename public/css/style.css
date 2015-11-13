@@ -55,6 +55,15 @@ header section div{
 	height: 119px;
 	margin-top:19px;
 	display: inline-block;
+
+	-webkit-transition: background-size 0.5s, background-position-x 0.5s;
+	-moz-transition: background-size 0.5s, background-position-x 0.5s;
+	transition: background-size 0.5s, background-position-x 0.5s;
+}
+
+header section div.small{
+	background-size: 85px;
+    background-position-x: 15px;
 }
 
 header section a{
@@ -105,7 +114,7 @@ header nav #navCanvas {
 	margin-top:-10px;
 }
 
-section#homeSection{
+section#home{
 	min-height:377px;
 }
 
@@ -216,6 +225,23 @@ section[name=life]{
   margin-right: 0;
 }
 
+.show-for-small #portfolio li{
+	width: auto;
+	min-height: 200px;
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+	float:none;
+}
+
+.show-for-small #portfolio li div{
+	max-height: 480px;
+}
+
+.show-for-small #portfolio li img{
+	max-width: none;
+}
+
 #caseModal img{
 	min-width: 400px;
 }
@@ -275,8 +301,8 @@ section[name=life]{
 
 
 section .row .columns .container {
-	height: 242px !important; 
-	width: 494px !important;
+	height: 242px; 
+	max-width: 494px;
 	overflow: hidden;
 	/*border: 1px solid #333;*/
 	/*-moz-box-shadow: 5px 5px 3px #e5e5e5;
@@ -296,6 +322,10 @@ section h3, section h4{
 	font-size: 1.5em;
 	font-weight:400 !important;
 	color:#333;
+}
+
+section[name="about"] h3{
+	color: #fff;
 }
 
 section ul li{

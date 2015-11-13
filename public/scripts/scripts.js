@@ -1,5 +1,5 @@
-var adjustment = 85;
-(function($){
+(function(window, $){
+  var adjustment = 85;
 
 	// Init Canvas Animation
 	window.navAnim = new CanvasNavAnimation("navCanvas");
@@ -9,12 +9,19 @@ var adjustment = 85;
     var firstItem = $('#firstNavItem');
     var itemWidth = $(firstItem)[0].clientWidth;
     var left = $(firstItem).offset().left - $('header .row')[0].offsetLeft;
-    navAnim.stopAnim = false
-    setTimeout(function(){navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);}, 800)
-    $(firstItem).addClass('active');
-    // Set up animations for portfolio
-    setPortfolioAnimations();
+    
+    navAnim.stopAnim = false;
+    
+    setTimeout(function(){
+        navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
+    }, 800);
 
+    $(firstItem).addClass('active');
+
+    // Set up animations for portfolio and logo
+    setAnimations();
+
+    //setScrollNavPosition();
     // Featured slider
     $('#featured').orbit({ fluid: '16x6', captions: true, timer: true }); 
   });
@@ -24,7 +31,7 @@ var adjustment = 85;
     $('header a').removeClass('active');
   	var itemWidth = $(this)[0].clientWidth;
     var left = $(this).offset().left - $('header .row')[0].offsetLeft;
-    navAnim.stopAnim = false
+    navAnim.stopAnim = false;
     navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
     $(this).addClass('active');
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
@@ -32,8 +39,12 @@ var adjustment = 85;
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
+          var topPosition = target.offset().top - adjustment;
+          if($(this).attr('href').indexOf('home') > -1){
+            topPosition = 0;
+          }
           $('html,body').animate({
-             scrollTop: target.offset().top - adjustment
+             scrollTop: topPosition
           }, 600,function(){}
         );
         return false;
@@ -43,13 +54,11 @@ var adjustment = 85;
   });
 
   // If resize, re-size, position and animate the bar
-  $(window).resize(function(){
-    var activeNavItem = $('header a.active');
-    var itemWidth = $(activeNavItem)[0].clientWidth;
-    var left = $(activeNavItem).offset().left - $('header .row')[0].offsetLeft;
-    navAnim.stopAnim = false
-    navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
-  }); 
+  var resizeTimer;
+  $(window).bind('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resizeNavAnimation, 100);
+  });
 
   // Tweet :)
   $("#latestTweet .tweet").tweet({
@@ -70,11 +79,12 @@ var adjustment = 85;
     window.open('http://twitter.com/jonlynch');
   });
 
-})(jQuery);
+})(window, jQuery);
 
-setPortfolioAnimations = function(){
-  var win = $(window);
-  var allMods = $('#portfolio li');
+setAnimations = function(){
+  var win = $(window),
+      allMods = $('#portfolio li'),
+      logoDiv = $('section#logo div');
 
   allMods.each(function(i, el) {
     var el = $(el);
@@ -84,13 +94,59 @@ setPortfolioAnimations = function(){
   });
 
   win.scroll(function(event) {
-    
+    if(window.scrollY > 50){
+      logoDiv.addClass('small');
+    } else {
+      logoDiv.removeClass('small');
+    }
     allMods.each(function(i, el) {
       var el = $(el);
       if (el.visible(true)) {
         el.addClass("come-in"); 
       } 
     });
-    
   });
 }
+
+setScrollNavPosition = function() {
+  var win = $(window),
+      sections = $('section[name]');
+
+  win.scroll(function(event) {
+    sections.each(function(i, el) {
+      var el = $(el),
+          activeNav = "",
+          itemWidth = 0,
+          left = 0;
+
+      if (el.visible(true)) {
+        activeNav = $('header a[href="#' + el.attr('name') + '"]');
+        itemWidth = activeNav[0].clientWidth;
+        left = activeNav.offset().left - $('header .row')[0].offsetLeft;
+        $('header a').removeClass('active');
+        navAnim.stopAnim = false;
+        navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);
+        activeNav.addClass('active');
+      } 
+    });
+  });
+}
+
+resizeNavAnimation = function() {
+  var activeNavItem = $('header a.active');
+  if(activeNavItem.length){
+    var itemWidth = $(activeNavItem)[0].clientWidth;
+    var left = $(activeNavItem).offset().left - $('header .row')[0].offsetLeft;
+    navAnim.stopAnim = false;
+    navAnim.animate(navAnim.canvas, navAnim.context, left, itemWidth);  
+  }
+};
+
+// Google Analytics
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51701738-1', 'thejonlynch.com');
+ga('send', 'pageview');

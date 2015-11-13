@@ -10,12 +10,18 @@
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" href="css/mediaOverrides.css" />
-	<!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+	<!--[if lt IE 10]>
+    <link rel="stylesheet" href="css/ie.css" />
+    <![endif]-->
+	<script src="scripts/vendor/modernizr-2.6.2.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body name="home" ng-controller="PortfolioController">
+	<!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
 	<!-- Top/Header Area -->
 	<header>
 		<div id="headerBG"></div>
@@ -39,7 +45,7 @@
 	</header>
 
 	<!-- Center Area -->
-	<section id="homeSection">
+	<section id="home" name="home">
 		<!-- Main Section -->
 		<div class="row" id="main">
 			<div class="hide-for-small">
@@ -80,38 +86,64 @@
 				<p>
 					Although I am comfortable with the server-side and SQL, my niche lies in creating the front-end experience for the user. I use whatever tools are at my disposal. Sometimes that's plain-jane <a href="http://html5.org" target="_blank">HTML5</a> and <a href="http://www.w3.org/Style/CSS/" target="_blank">CSS3</a> with touches of non-obtrusive <a href="http://javascript.crockford.com/javascript.html" target="_blank">Javascript</a> (often <a href="http://jquery.com/" target="_blank">jQuery</a> for DOM manipulation). Sometimes that's creating a true Reponsive SPA experience using tools like <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>, <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://sass-lang.com/" target="_blank">Sass</a>.
 				</p>
+
 				<p>
 					I'm always interested in learning more. Here are a few things I love learning more about and experimenting with when I have time (in no particular order):
-					<ul>
-						<li>AngularJS</li>
-						<li>Sass</li>
-						<li>Compass</li>
-						<li>LESS</li>
-						<li>Node.js</li>
-						<li>The Ruby Language</li>
-						<li>Ruby on Rails</li>
-						<li>Python</li>
-						<li>Django</li>
-						<li>UX Design/HCI</li>
-					</ul>
+					<div class="six columns mobile-two">
+						<h3>Development Frameworks/Interests</h3>
+						<ul>
+							<li>Meteor</li>
+							<li>React</li>
+							<li>AngularJS</li>
+							<li>MongoDB</li>
+							<li>Sass</li>
+							<li>Compass</li>
+							<li>LESS</li>
+							<li>Node.js</li>
+							<li>Python</li>
+							<li>Django</li>
+							<li>The Ruby Language</li>
+							<li>Ruby on Rails</li>
+							<li>UX Design/HCI</li>
+						</ul>
+					</div>
+					<div class="six columns mobile-two">
+						<h3>Robotics!</h3>
+						<ul>
+							<li>Arduino</li>
+							<li>Johnny-Five Node Library</li>
+							<li>Micro Controllers</li>
+							<li>Physical Programming</li>
+						</ul>
+					</div>
 				</p>
-			</div>
-			<div class="four columns">
-				
 			</div>
 		</div>
 	</section>
 
 	<section name="work">
 		<div class="row">
-			<div class="twelve columns centered">
-				<h3>Click on one of the examples below to view details.</h3>
-				<ul id="portfolio">
-					<li ng-repeat="case in portfolio.cases" ng-click="changeModal(case)">
-						<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
-						<span>{{case.name}}</span>
-					</li>
-				</ul>
+			<div class="hide-for-small">
+				<div class="twelve columns centered">
+					<h3>Unfortunately, due to confidentiality restrictions, I am unable to show much of my work here. Contact me personally if you would like to know/see more, otherwise click on one of the examples below to view details.</h3>
+					<ul id="portfolio">
+						<li ng-repeat="case in portfolio.cases" ng-click="changeModal(case)">
+							<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
+							<span>{{case.name}}</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="show-for-small">
+				<div class="mobile-four columns centered">
+					<h3>Unfortunately, due to confidentiality restrictions, I am unable to show much of my work here. Contact me personally if you would like to know/see more, otherwise click on one of the examples below to view details.</h3>
+					<ul id="portfolio">
+						<li ng-repeat="case in portfolio.cases" ng-click="changeModal(case)" class="centered">
+							<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
+							<span>{{case.name}}</span>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -121,18 +153,18 @@
 			<div class="twelve columns">
 				<h2>I work and play in Dallas, Texas</h2>
 				<p>
-					With my beautiful and supportive wife and two talented daughters, I live in a <a href="http://en.wikipedia.org/wiki/Frisco,_Texas" target="_blank">not-so-quiet, but often friendly suburb</a> just north of Dallas. 
+					With my beautiful and supportive wife and two talented daughters, I live in a <a href="http://en.wikipedia.org/wiki/Frisco,_Texas" target="_blank">not-so-quiet, but often friendly suburb</a> just north of Dallas.
 				</p>
 				<p>
-					I work in Downtown Dallas currently for KPMG, the Big-Four accounting firm as a Senior UX Designer and UI Developer designing and implementing the Front-End UI of many internal and external tax-centric web applications.  
+					I work in Dallas currently as a Front-End Software Engineer for Dealer.com who was recently acquired by Dealer Track.
 				</p>
 				<p>
-					In my spare time, I enjoy long walks on the... oh, wait, I live in North Texas. Um... well I do play guitar and drums and can usually be found serving in a local church body on Sunday mornings rocking out! I can also probably pwn you like nobody's business in COD or Battlefield.
+					In my spare time, I enjoy long walks on the... oh, wait, I live in North Texas. Um... well I do play guitar and drums, tinker with robotics, and I can also probably pwn you like nobody's business in COD or Battlefield.
 				</p>
 			</div>
 		</div>
 	</section>
-	
+
 	<!-- Footer -->
 	<footer>
 		<div class="row">
@@ -155,7 +187,7 @@
 			</div>
 		</div>
 	</footer>
-	
+
 	<div id="caseModal" class="reveal-modal large" ng-model="selectedCase">
 	  <div class="row">
 	  	<div class="twelve columns">
@@ -180,7 +212,7 @@
 	  </div>
 	  <a class="close-reveal-modal"><i class="fa fa-times"></i></a>
 	</div>
-	
+
 	<!-- JS Libraries -->
 	<script src="scripts/vendor/jquery.js"></script>
 	<script src="scripts/vendor/jquery.visible.js"></script>
@@ -190,6 +222,7 @@
 	<script src="scripts/vendor/jquery.foundation.reveal.js"></script>
 	<script src="scripts/vendor/jquery.tweet.js"></script>
 	<script src="scripts/vendor/angular.min.js"></script>
+	<script src="scripts/vendor/angular-route.min.js"></script>
 	<!-- Local scripts -->
 	<script src="scripts/fonts.js"></script>
 	<script src="scripts/libs.js"></script>
@@ -197,6 +230,6 @@
 	<script src="scripts/scripts.js"></script>
 	<script src="scripts/app.js"></script>
 	<script src="scripts/controllers/PortfolioController.js"></script>
-	
+
 </body>
 </html>

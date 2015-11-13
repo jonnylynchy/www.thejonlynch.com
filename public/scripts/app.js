@@ -1,3 +1,3 @@
 'use strict';
 
-var portfolioApp = angular.module('portfolioApp', []);
+var portfolioApp = angular.module('portfolioApp', ['ngRoute']);

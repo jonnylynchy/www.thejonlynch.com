@@ -26,7 +26,7 @@ portfolioApp.controller('PortfolioController',
                 //     smallImageUrl: 'images/work/small/kpmg_mobile.png',
                 //     largeImageUrl: 'images/work/full/kpmg_mobile.png',
                 //     technologies: ['Sencha Touch 2.X Javascript Framework', 'HTML5', 'CSS3', 'Sass', 'Phone Gap'],
-                //     description: 'Federal tax users needed an application to help them approve documents and steps within a workflow. This application helps the on-the-go tax professional do just that. From wireframe concepts to full application implmentation, I lead the UX effort as well as UI implementation using the Sencha Touch 2.X Framework, HTML5 and Sass.',
+                //     description: 'Federal tax users needed an application to help them approve documents and steps within a workflow. This application helps the on-the-go tax professional do just that. From wireframe concepts to full application implmentation, I led the UX effort as well as UI implementation using the Sencha Touch 2.X Framework, HTML5 and Sass.',
                 //     url:'https://play.google.com/store/apps/details?id=com.kpmg.kpmglinkmobileworkflow'
                 // },
                 // {
