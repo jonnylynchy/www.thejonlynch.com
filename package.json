@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Personal Website",
   "dependencies": {
-    "harp": "^0.20.0"
+      "harp": "~0.12.1"
+  },
+  "scripts": {
+      "start": "node server.js"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
