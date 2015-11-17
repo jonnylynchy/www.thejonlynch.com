@@ -1,0 +1,8 @@
+{
+  "name": "TheJonLynch.com",
+  "version": "1.0.0",
+  "description": "Personal Website",
+  "dependencies": {
+    "harp": "^0.20.0"
+  }
+}
