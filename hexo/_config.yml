@@ -66,6 +66,9 @@ pagination_dir: page
 ## theme: landscape
 theme: jonlynch
 
+# Comments
+disqus_shortname: jonlynch
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
