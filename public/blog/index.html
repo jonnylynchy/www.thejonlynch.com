@@ -71,6 +71,10 @@
   <time datetime="2015-12-01T20:39:15.000Z" itemprop="datePublished">2015-12-01</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/General/">General</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -79,7 +83,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2015/12/01/First-Post/">First Post</a>
+      <a class="article-title" href="/blog/2015/12/01/First-Post/">Hexo - Blogging Platform for Developers</a>
     </h1>
   
 
@@ -87,21 +91,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to my blog! I don’t have a ton to say here other than this is my first post. I’ve done blogging before here and there with wordpress, blogger, etc. but I don’t feel any of those old posts are relevant to my career anymore. So… goodbye old and hello new!</p>
-<p>I’m using <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>. Hexo is a static file generator, not a traditional blogging platform. I can create a new blog post via command line like-a-so:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>Then I can deploy this to Heroku or GitHub and voila!</p>
-<p>I’ll be blogging about life, work, all things javascript, etc. so check back!</p>
-<p>-Jon</p>
+        <h2 id="Welcome!">Welcome!</h2><p>I’ve done blogging before here and there with WordPress, Blogger, etc., but I don’t feel any of those old posts are relevant to my career or life in general anymore. So… goodbye old and hello new!</p>
+<p>I’m using <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>. Hexo is not just a blogging platform, it’s also a powerful static file generator which uses Node.js to generate content on your local machine, or where you choose to configure the generated content to deploy. Although not a traditional blogging platform such as WordPress, it’s very versatile and has loads of features.</p>
+<p>Once installed via NPM, creating a new blog post via command line is easy, like-a-so:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My First Blog Post!"</span></span><br></pre></td></tr></table></figure></p>
+<p>Hexo then creates a new source file within your hexo directory. With the default setup, Hexo creates these files in Markdown. No need to edit HTML. There are also configuration options to create files as Jade, Haml or Ejs.</p>
+<p>Example of post:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">title: First Post</span><br><span class="line">date: 2015-12-01 13:15:15</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">- </span>Stuff</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">- </span>Cool Stuff</span><br><span class="line"><span class="header">- Other Cool Stuff</span><br><span class="line">---</span></span><br><span class="line"><span class="header">### Content</span></span><br><span class="line">Write stuff</span><br><span class="line"></span><br><span class="line"><span class="header">## Sub Content</span></span><br><span class="line">Write some more stuff</span><br></pre></td></tr></table></figure></p>
+<p>Once you’ve created your file and written up your post, you can generate the static files via:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
+<p>This will create files within your configured directory (mine is /public).<br>Then you can deploy this to Heroku or GitHub and voila! Since I have the GitHub repo for my site setup to trigger a Heroku deployment, this makes it super easy for me.</p>
+<p>Obviously, this is for the more tech savvy user who wants to blog. But once it’s setup, a couple of commands will do the trick.</p>
+<p>Anyway, I’ll be blogging about life, work, all things javascript, Front-End development, etc. so check back!</p>
+<p>Thanks for stopping by.<br>-Jon</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.thejonlynch.com/blog/2015/12/01/First-Post/" data-id="cihnx6p1b00003htx42suyykn" class="article-share-link">Share</a>
+      <a data-url="http://www.thejonlynch.com/blog/2015/12/01/First-Post/" data-id="ciho7urz60000tytxtfojvn0a" class="article-share-link">Share</a>
       
         <a href="http://www.thejonlynch.com/blog/2015/12/01/First-Post/#disqus_thread" class="article-comment-link">Comments</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Node-js/">Node.js</a></li></ul>
+
     </footer>
   </div>
   
@@ -115,10 +125,31 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/General/">General</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node-js/">Node.js</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/blog/tags/Node-js/" style="font-size: 10px;">Node.js</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -136,7 +167,7 @@
       <ul>
         
           <li>
-            <a href="/blog/2015/12/01/First-Post/">First Post</a>
+            <a href="/blog/2015/12/01/First-Post/">Hexo - Blogging Platform for Developers</a>
           </li>
         
       </ul>
