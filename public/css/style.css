@@ -114,6 +114,44 @@ header nav #navCanvas {
 	margin-top:-10px;
 }
 
+/* Mobile Menu */
+header .dropArrow {
+	position: absolute;
+  top: 32px;
+  right: 25px;
+  z-index: 103;
+	height: 85px;
+	width: 100px;
+	text-align: right;
+}
+
+header .dropArrow ul {
+	display:none;
+}
+
+header .dropArrow ul.active {
+	display: block;
+	position: absolute;
+	top: 50px;
+	background: #fff;
+	left: -250px;
+	opacity: 0.95;
+	text-align: left;
+}
+
+header .dropArrow ul li a {
+	font-size:2em;
+	display: block;
+	padding: 10px;
+	width: 400px;
+}
+
+header .show-for-small {
+	position: relative;
+  z-index: 101;
+  top: -138px;
+}
+
 section#home{
 	min-height:377px;
 }
@@ -135,6 +173,7 @@ section{
 section#logo{
 	margin-top:0px;
 	height:auto;
+  z-index: 100;
 }
 
 section[name=about]{

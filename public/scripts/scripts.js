@@ -47,6 +47,20 @@
     scrollToPosition($(this));
   });
 
+  // Mobile Menu
+  var menuClicked = false;
+  var $menuTarget = $('header .fa-navicon');
+  var $subMenu = $('header .dropArrow').find('ul');
+  $menuTarget.on('click', function(){
+    if(menuClicked){
+      $subMenu.removeClass('active');
+      menuClicked = false;
+    } else {
+      $subMenu.addClass('active');
+      menuClicked = true;
+    }
+  });
+
   // If resize, re-size, position and animate the bar
   var resizeTimer;
   $(window).bind('resize', function () {
