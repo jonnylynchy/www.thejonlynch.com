@@ -69,7 +69,7 @@ header section div{
 
 header section.small div{
 	background-size: 85px;
-  background-position-x: 15px;
+  background-position-x: 11px;
 	width: 96px;
 }
 
@@ -238,6 +238,7 @@ header .show-for-small {
     height: 100%;
     background: #fff none repeat scroll 0% 0%;
     transition: all 0.4s ease 0s;
+		z-index: 1001
 }
 
 section#home{
