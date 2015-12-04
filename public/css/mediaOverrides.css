@@ -3,7 +3,7 @@
 
 	header section a{
 		font-size:2.5em;
-		margin-top:15px;
+		/*margin-top:15px;*/
 	}
 
   header nav{
@@ -19,5 +19,12 @@
 @media only screen and (max-width: 860px) {
 	header nav a:link{
 		margin-right: 20px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	/* logo on mobile */
+	header section div {
+		margin-left: 8px;
 	}
 }

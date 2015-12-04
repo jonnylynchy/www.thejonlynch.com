@@ -22,184 +22,198 @@
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
 
-	<!-- Top/Header Area -->
-	<header>
-		<div id="headerBG"></div>
-		<div class="row">
-			<!-- Logo -->
-			<section class="five columns" id="logo" >
-				<div></div>
-				<a href="#home" id="firstNavItem">JON LYNCH</a>
-			</section>
-			<!-- Navigation -->
-			<div class="hide-for-small">
-				<nav class="seven columns">
-					<a href="/blog">Blog</a>
-					<a href="#life">Life &amp; Stuff</a>
-					<a href="#work">Work</a>
-					<a href="#about">About</a>
-					<div class="clear"></div>
-				</nav>
-				<canvas id="navCanvas" width="940" height="10"></canvas>
-			</div>
-			<div class="show-for-small">
-				<div class="dropArrow">
-					<i class="fa fa-navicon fa-2x"></i>
-					<ul>
-						<li><a href="#about">About</a></li>
-						<li><a href="#work">Work</a></li>
-						<li><a href="#life">Life &amp; Stuff</a></li>
-						<li><a href="/blog">Blog</a></li>
-					</ul>
+	<div id="container">
+		<!-- Top/Header Area -->
+		<header>
+			<div id="headerBG"></div>
+			<div class="row">
+				<!-- Logo -->
+				<section class="five columns" id="logo" >
+					<div></div>
+					<a href="#home" id="firstNavItem">JON LYNCH</a>
+				</section>
+				<!-- Navigation -->
+				<div class="hide-for-small">
+					<nav class="seven columns">
+						<a href="/blog">Blog</a>
+						<a href="#life">Life &amp; Stuff</a>
+						<a href="#work">Work</a>
+						<a href="#about">About</a>
+						<div class="clear"></div>
+					</nav>
+					<canvas id="navCanvas" width="940" height="10"></canvas>
 				</div>
 			</div>
-		</div>
-	</header>
+		</header>
 
-	<!-- Center Area -->
-	<section id="home" name="home">
-		<!-- Main Section -->
-		<div class="row" id="main">
-			<div class="hide-for-small">
-				<div class="seven columns">
-					<div class="container">
-						<div id="featured">
-						  <img ng-repeat="case in portfolio.cases" ng-src="{{case.smallImageUrl}}" alt="{{case.name}}">
+		<!-- Center Area -->
+		<section id="home" name="home">
+			<!-- Main Section -->
+			<div class="row" id="main">
+				<div class="hide-for-small">
+					<div class="seven columns">
+						<div class="container">
+							<div id="featured">
+							  <img ng-repeat="case in portfolio.cases" ng-src="{{case.smallImageUrl}}" alt="{{case.name}}">
+							</div>
+						</div>
+					</div>
+					<div class="five columns desc">
+						UI/UX Developer &amp;
+						Web Enthusiast
+						<div class="focus">
+							Javascript, HTML5, CSS3
 						</div>
 					</div>
 				</div>
-				<div class="five columns desc">
-					UI/UX Developer &amp;
-					Web Enthusiast
-					<div class="focus">
-						Javascript, HTML5, CSS3
+				<div class="show-for-small">
+					<div class="five columns desc">
+						UI/UX Developer &amp;
+						Web Enthusiast
+						<div class="focus">
+							Javascript, HTML5, CSS3
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="show-for-small">
-				<div class="five columns desc">
-					UI/UX Developer &amp;
-					Web Enthusiast
-					<div class="focus">
-						Javascript, HTML5, CSS3
-					</div>
+		</section>
+
+		<section name="about">
+			<div class="row">
+				<div class="twelve columns">
+					<h2>My name is Jon Lynch.</h2>
+					<p>
+						 I am a UX Designer and a Front-End Developer. I've been designing and developing web apps since 2000. In the beginning years of my career, I started with typical marketing and branding. This included designing logos, creating websites in both Flash and HTML and branding materials such as CD-Roms and Print packages. As the web grew, my experience and repertoire grew as well. When needed, I transitioned to working with databases and server-side languagues such as ColdFusion and C#.net. Now with over 14 years of experience, I've done everything from graphic design for branding materials to full application design and development. I've been blessed with the opporunity to work with many Fortune 500 companies as well as "Mom &amp; Pop" shops.
+					</p>
+					<p>
+						Although I am comfortable with the server-side and SQL, my niche lies in creating the front-end experience for the user. I use whatever tools are at my disposal. Sometimes that's plain-jane <a href="http://html5.org" target="_blank">HTML5</a> and <a href="http://www.w3.org/Style/CSS/" target="_blank">CSS3</a> with touches of non-obtrusive <a href="http://javascript.crockford.com/javascript.html" target="_blank">Javascript</a> (often <a href="http://jquery.com/" target="_blank">jQuery</a> for DOM manipulation). Sometimes that's creating a true Reponsive SPA experience using tools like <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>, <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://sass-lang.com/" target="_blank">Sass</a>.
+					</p>
+
+					<p>
+						I'm always interested in learning more. Here are a few things I love learning more about and experimenting with when I have time (in no particular order):
+						<div class="six columns mobile-two">
+							<h3>Development Frameworks/Interests</h3>
+							<ul>
+								<li>Meteor</li>
+								<li>React</li>
+								<li>AngularJS</li>
+								<li>MongoDB</li>
+								<li>Sass</li>
+								<li>Compass</li>
+								<li>LESS</li>
+								<li>Node.js</li>
+								<li>Python</li>
+								<li>Django</li>
+								<li>The Ruby Language</li>
+								<li>Ruby on Rails</li>
+								<li>UX Design/HCI</li>
+							</ul>
+						</div>
+						<div class="six columns mobile-two">
+							<h3>Robotics!</h3>
+							<ul>
+								<li>Arduino</li>
+								<li>Johnny-Five Node Library</li>
+								<li>Micro Controllers</li>
+								<li>Physical Programming</li>
+							</ul>
+						</div>
+					</p>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section name="about">
-		<div class="row">
-			<div class="twelve columns">
-				<h2>My name is Jon Lynch.</h2>
-				<p>
-					 I am a UX Designer and a Front-End Developer. I've been designing and developing web apps since 2000. In the beginning years of my career, I started with typical marketing and branding. This included designing logos, creating websites in both Flash and HTML and branding materials such as CD-Roms and Print packages. As the web grew, my experience and repertoire grew as well. When needed, I transitioned to working with databases and server-side languagues such as ColdFusion and C#.net. Now with over 14 years of experience, I've done everything from graphic design for branding materials to full application design and development. I've been blessed with the opporunity to work with many Fortune 500 companies as well as "Mom &amp; Pop" shops.
-				</p>
-				<p>
-					Although I am comfortable with the server-side and SQL, my niche lies in creating the front-end experience for the user. I use whatever tools are at my disposal. Sometimes that's plain-jane <a href="http://html5.org" target="_blank">HTML5</a> and <a href="http://www.w3.org/Style/CSS/" target="_blank">CSS3</a> with touches of non-obtrusive <a href="http://javascript.crockford.com/javascript.html" target="_blank">Javascript</a> (often <a href="http://jquery.com/" target="_blank">jQuery</a> for DOM manipulation). Sometimes that's creating a true Reponsive SPA experience using tools like <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>, <a href="http://foundation.zurb.com/" target="_blank">Foundation</a>, <a href="https://angularjs.org/" target="_blank">AngularJS</a> and <a href="http://sass-lang.com/" target="_blank">Sass</a>.
-				</p>
-
-				<p>
-					I'm always interested in learning more. Here are a few things I love learning more about and experimenting with when I have time (in no particular order):
-					<div class="six columns mobile-two">
-						<h3>Development Frameworks/Interests</h3>
-						<ul>
-							<li>Meteor</li>
-							<li>React</li>
-							<li>AngularJS</li>
-							<li>MongoDB</li>
-							<li>Sass</li>
-							<li>Compass</li>
-							<li>LESS</li>
-							<li>Node.js</li>
-							<li>Python</li>
-							<li>Django</li>
-							<li>The Ruby Language</li>
-							<li>Ruby on Rails</li>
-							<li>UX Design/HCI</li>
+		<section name="work">
+			<div class="row">
+				<div class="hide-for-small">
+					<div class="twelve columns centered">
+						<h3>Unfortunately, due to confidentiality restrictions, I am unable to show much of my work here. Contact me personally if you would like to know/see more, otherwise click on one of the examples below to view details.</h3>
+						<ul id="portfolio">
+							<li ng-repeat="case in portfolio.cases" ng-click="changeModal(case)">
+								<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
+								<span>{{case.name}}</span>
+							</li>
 						</ul>
 					</div>
-					<div class="six columns mobile-two">
-						<h3>Robotics!</h3>
-						<ul>
-							<li>Arduino</li>
-							<li>Johnny-Five Node Library</li>
-							<li>Micro Controllers</li>
-							<li>Physical Programming</li>
+				</div>
+				<div class="show-for-small">
+					<div class="mobile-four columns centered">
+						<h3>Unfortunately, due to confidentiality restrictions, I am unable to show much of my work here. Contact me personally if you would like to know/see more, otherwise click on one of the examples below to view details.</h3>
+						<ul id="portfolio">
+							<li ng-repeat="case in portfolio.cases" ng-click="changeModal(case)" class="centered">
+								<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
+								<span>{{case.name}}</span>
+							</li>
 						</ul>
 					</div>
-				</p>
-			</div>
-		</div>
-	</section>
-
-	<section name="work">
-		<div class="row">
-			<div class="hide-for-small">
-				<div class="twelve columns centered">
-					<h3>Unfortunately, due to confidentiality restrictions, I am unable to show much of my work here. Contact me personally if you would like to know/see more, otherwise click on one of the examples below to view details.</h3>
-					<ul id="portfolio">
-						<li ng-repeat="case in portfolio.cases" ng-click="changeModal(case)">
-							<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
-							<span>{{case.name}}</span>
-						</li>
-					</ul>
 				</div>
 			</div>
-			<div class="show-for-small">
-				<div class="mobile-four columns centered">
-					<h3>Unfortunately, due to confidentiality restrictions, I am unable to show much of my work here. Contact me personally if you would like to know/see more, otherwise click on one of the examples below to view details.</h3>
-					<ul id="portfolio">
-						<li ng-repeat="case in portfolio.cases" ng-click="changeModal(case)" class="centered">
-							<div><img ng-src="{{case.smallImageUrl}}" alt="{{case.name}}"></div>
-							<span>{{case.name}}</span>
-						</li>
-					</ul>
+		</section>
+
+		<section name="life">
+			<div class="row">
+				<div class="twelve columns">
+					<h2>I work and play in Dallas, Texas</h2>
+					<p>
+						With my beautiful and supportive wife and two talented daughters, I live in a <a href="http://en.wikipedia.org/wiki/Frisco,_Texas" target="_blank">not-so-quiet, but often friendly suburb</a> just north of Dallas.
+					</p>
+					<p>
+						I work in Dallas currently as a Front-End Software Engineer for Dealer.com who was recently acquired by Dealer Track.
+					</p>
+					<p>
+						In my spare time, I enjoy long walks on the... oh, wait, I live in North Texas. Um... well I do play guitar and drums, tinker with robotics, and I can also probably pwn you like nobody's business in COD or Battlefield.
+					</p>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<section name="life">
-		<div class="row">
-			<div class="twelve columns">
-				<h2>I work and play in Dallas, Texas</h2>
-				<p>
-					With my beautiful and supportive wife and two talented daughters, I live in a <a href="http://en.wikipedia.org/wiki/Frisco,_Texas" target="_blank">not-so-quiet, but often friendly suburb</a> just north of Dallas.
-				</p>
-				<p>
-					I work in Dallas currently as a Front-End Software Engineer for Dealer.com who was recently acquired by Dealer Track.
-				</p>
-				<p>
-					In my spare time, I enjoy long walks on the... oh, wait, I live in North Texas. Um... well I do play guitar and drums, tinker with robotics, and I can also probably pwn you like nobody's business in COD or Battlefield.
-				</p>
+		<!-- Footer -->
+		<footer>
+			<div class="row">
+				<div class="twelve columns">
+					<br /><br />
+					<p>
+						<div class="left">
+							<h5 class="subheader">Connect with me:</h5>
+						</div>
+						<div class="right">
+							<h5 class="subheader">
+								<a href="http://www.linkedin.com/in/jonclynch/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>&nbsp;
+								<a href="https://github.com/jonnylynchy" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp;
+								<a href="https://twitter.com/jonlynch" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>&nbsp;
+							</h5>
+						</div>
+						<div class="clear"></div>
+					</p>
+					<br /><br />
+				</div>
 			</div>
+		</footer>
+	</div>
+	<div id="mobile-nav-dimmer" class="show-for-small"></div>
+	<nav id="mobile-nav" class="show-for-small">
+		<a id="mobile-nav-toggle">
+			<span class="mobile-nav-toggle-bar"></span>
+			<span class="mobile-nav-toggle-bar"></span>
+			<span class="mobile-nav-toggle-bar"></span>
+		</a>
+		<div>
+			<ul>
+				<li>
+					<a href="/#about">About</a>
+				</li>
+				<li>
+					<a href="/#work">Work</a>
+				</li>
+				<li>
+					<a href="/#life">Life &amp; Stuff</a>
+				</li>
+				<li>
+					<a href="/blog">Blog</a>
+				</li>
+			</ul>
 		</div>
-	</section>
-
-	<!-- Footer -->
-	<footer>
-		<div class="row">
-			<div class="twelve columns">
-				<br /><br />
-				<p>
-					<div class="left">
-						<h5 class="subheader">Connect with me:</h5>
-					</div>
-					<div class="right">
-						<h5 class="subheader">
-							<a href="http://www.linkedin.com/in/jonclynch/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>&nbsp;
-							<a href="https://github.com/jonnylynchy" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp;
-							<a href="https://twitter.com/jonlynch" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>&nbsp;
-						</h5>
-					</div>
-					<div class="clear"></div>
-				</p>
-				<br /><br />
-			</div>
-		</div>
-	</footer>
-
+	</nav>
 	<div id="caseModal" class="reveal-modal large" ng-model="selectedCase">
 	  <div class="row">
 	  	<div class="twelve columns">

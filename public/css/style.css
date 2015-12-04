@@ -4,6 +4,12 @@ body{
 	font-family: 'Raleway', sans-serif;
 }
 
+#container {
+	transition: all 0.4s ease 0s;
+	height: 100%;
+	overflow: auto;
+}
+
 header{
 	position: fixed;
 	height: 83px;
@@ -56,21 +62,21 @@ header section div{
 	margin-top:19px;
 	display: inline-block;
 
-	-webkit-transition: background-size 0.5s, background-position-x 0.5s;
-	-moz-transition: background-size 0.5s, background-position-x 0.5s;
-	transition: background-size 0.5s, background-position-x 0.5s;
+	-webkit-transition: background-size 0.5s, background-position-x 0.5s, width 0.5s;
+	-moz-transition: background-size 0.5s, background-position-x 0.5s, width 0.5s;
+	transition: background-size 0.5s, background-position-x 0.5s, width 0.5s;
 }
 
-header section div.small{
+header section.small div{
 	background-size: 85px;
-    background-position-x: 15px;
+  background-position-x: 15px;
+	width: 96px;
 }
 
 header section a{
 	display: inline-block;
-	margin: 18px 0px;
-	padding:10px 0;
-	/*font-family: 'Advent Pro', sans-serif;*/
+	margin: 18px 0px 18px 0px;
+	padding: 12px 0px;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 300;
 	font-size:2.5em;
@@ -115,41 +121,123 @@ header nav #navCanvas {
 }
 
 /* Mobile Menu */
-header .dropArrow {
-	position: absolute;
-  top: 32px;
-  right: 25px;
-  z-index: 103;
-	height: 85px;
-	width: 100px;
-	text-align: right;
-}
-
-header .dropArrow ul {
-	display:none;
-}
-
-header .dropArrow ul.active {
-	display: block;
-	position: absolute;
-	top: 50px;
-	background: #fff;
-	left: -250px;
-	opacity: 0.95;
-	text-align: left;
-}
-
-header .dropArrow ul li a {
-	font-size:2em;
-	display: block;
-	padding: 10px;
-	width: 400px;
-}
-
 header .show-for-small {
 	position: relative;
   z-index: 101;
   top: -138px;
+}
+
+#mobile-nav-toggle {
+	z-index: 1001;
+	position: absolute;
+	top: 36px;
+	left: -45px;
+	width: 25px;
+	height: 20px;
+	margin: auto;
+	opacity: 0.5;
+	cursor: pointer;
+	transition: all 0.2s ease 0s;
+}
+
+.mobile-nav-toggle-bar:first-child {
+  top: 0px;
+}
+
+.mobile-nav-toggle-bar:nth-child(2) {
+  top: 9px;
+}
+
+.mobile-nav-toggle-bar:last-child {
+  top: 18px;
+}
+
+.mobile-nav-toggle-bar {
+  background: #333 none repeat scroll 0% 0%;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  transition: all 0.4s ease 0s;
+  transform-origin: 0px 50% 0px;
+  border-radius: 2px;
+}
+
+#mobile-nav {
+
+}
+
+#mobile-nav div {
+	padding:15px;
+}
+
+#mobile-nav div ul li{
+	font-size: 1.8em;
+}
+
+#mobile-nav div ul li a {
+		border-bottom: 1px dotted rgb(204, 204, 204);
+		padding: 12px 0px;
+		display: block;
+}
+
+#mobile-nav div ul li:first-child a {
+	padding-top: 0;
+}
+
+
+.mobile-nav-on .mobile-nav-toggle-bar {
+	background: #fff none repeat scroll 0% 0%;
+	opacity: 1;
+}
+
+.mobile-nav-on .mobile-nav-toggle-bar:first-child {
+  transform: rotate(45deg);
+}
+
+.mobile-nav-on .mobile-nav-toggle-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-nav-on .mobile-nav-toggle-bar:last-child {
+  transform: rotate(-45deg);
+}
+
+.mobile-nav-on #container {
+    overflow: hidden;
+}
+
+.mobile-nav-on #mobile-nav {
+    transform: translateX(-100%);
+		z-index: 1000;
+}
+
+.mobile-nav-on #mobile-nav-dimmer {
+    opacity: 0.7;
+    transform: translateX(100%);
+    transition: opacity 0.4s ease 0s;
+		z-index: 999;
+}
+
+#mobile-nav-dimmer {
+    position: absolute;
+    top: 0px;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    background: #333 none repeat scroll 0% 0%;
+    opacity: 0;
+    transition: opacity 0.4s ease 0s, transform 0s ease 0.4s;
+}
+
+#mobile-nav {
+    position: fixed;
+    top: 0px;
+    width: 260px;
+    right: -260px;
+    height: 100%;
+    background: #fff none repeat scroll 0% 0%;
+    transition: all 0.4s ease 0s;
 }
 
 section#home{

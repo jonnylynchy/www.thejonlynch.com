@@ -1,4 +1,5 @@
 (function(window, $){
+
   window.adjustment = 85;
 
 	// Init Canvas Animation
@@ -37,8 +38,9 @@
   });
 
 	// Nav animation
-  $('header a').click(function(){
-    $('header a').removeClass('active');
+  var $navItems = $('header a, #mobile-nav li a');
+  $navItems.click(function(){
+    $navItems.removeClass('active');
   	var itemWidth = $(this)[0].clientWidth;
     var left = $(this).offset().left - $('header .row')[0].offsetLeft;
     navAnim.stopAnim = false;
@@ -49,14 +51,14 @@
 
   // Mobile Menu
   var menuClicked = false;
-  var $menuTarget = $('header .fa-navicon');
-  var $subMenu = $('header .dropArrow').find('ul');
+  var $menuTarget = $('#mobile-nav-toggle, #mobile-nav li a');
+
   $menuTarget.on('click', function(){
     if(menuClicked){
-      $subMenu.removeClass('active');
+      $('body').removeClass('mobile-nav-on');
       menuClicked = false;
     } else {
-      $subMenu.addClass('active');
+      $('body').addClass('mobile-nav-on');
       menuClicked = true;
     }
   });
@@ -113,7 +115,7 @@ scrollToPosition = function(origin){
 setAnimations = function(){
   var win = $(window),
       allMods = $('#portfolio li'),
-      logoDiv = $('section#logo div');
+      logoDiv = $('section#logo');
 
   allMods.each(function(i, el) {
     var el = $(el);

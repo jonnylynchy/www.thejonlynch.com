@@ -1,18 +1,40 @@
 <%- partial('_partial/head') %>
 <body>
   <div id="container">
-    <div id="wrap">
-      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-      <div class="outer">
-        <section id="main"><%- body %></section>
-        <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
-          <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
-        <% } %>
-      </div>
-      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+    <div class="outer">
+      <section id="main"><%- body %></section>
+      <% if (theme.sidebar && theme.sidebar !== 'bottom'){ %>
+        <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+      <% } %>
     </div>
-    <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
-    <%- partial('_partial/after-footer') %>
+    <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
   </div>
+  <div id="mobile-nav-dimmer" class="show-for-small"></div>
+	<nav id="mobile-nav" class="show-for-small">
+		<a id="mobile-nav-toggle">
+			<span class="mobile-nav-toggle-bar"></span>
+			<span class="mobile-nav-toggle-bar"></span>
+			<span class="mobile-nav-toggle-bar"></span>
+		</a>
+		<div>
+			<ul>
+				<li>
+					<a href="/#about">About</a>
+				</li>
+				<li>
+					<a href="/#work">Work</a>
+				</li>
+				<li>
+					<a href="/#life">Life &amp; Stuff</a>
+				</li>
+				<li>
+					<a href="/blog">Blog</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+  <!-- <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %> -->
+  <%- partial('_partial/after-footer') %>
 </body>
 </html>
