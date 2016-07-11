@@ -69,8 +69,12 @@ header section div{
 
 header section.small div{
 	background-size: 85px;
-  background-position-x: 11px;
+  	background-position-x: 11px;
 	width: 96px;
+}
+
+header section.small a#firstNavItem {
+	margin-left: 24px;
 }
 
 header section a{
