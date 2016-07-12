@@ -3,18 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo - Blogging Platform for Developers | Jon Lynch</title>
+  <title>Tag: ES2015 | Jon Lynch</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome!I’ve done blogging before here and there with WordPress, Blogger, etc., but I don’t feel any of those old posts are relevant to my career or life in general anymore. So… goodbye old and hello">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo - Blogging Platform for Developers">
-<meta property="og:url" content="http://www.thejonlynch.com/blog/2015/12/01/First-Post/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jon Lynch">
+<meta property="og:url" content="http://www.thejonlynch.com/blog/tags/ES2015/index.html">
 <meta property="og:site_name" content="Jon Lynch">
-<meta property="og:description" content="Welcome!I’ve done blogging before here and there with WordPress, Blogger, etc., but I don’t feel any of those old posts are relevant to my career or life in general anymore. So… goodbye old and hello">
-<meta property="og:updated_time" content="2015-12-02T03:22:40.000Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo - Blogging Platform for Developers">
-<meta name="twitter:description" content="Welcome!I’ve done blogging before here and there with WordPress, Blogger, etc., but I don’t feel any of those old posts are relevant to my career or life in general anymore. So… goodbye old and hello">
+<meta name="twitter:title" content="Jon Lynch">
+<meta name="twitter:description">
   
     <link rel="alternative" href="../blog/atom.xml" title="Jon Lynch" type="application/atom+xml">
   
@@ -63,80 +62,39 @@
 </header>
 
     <div class="outer">
-      <section id="main"><article id="post-First-Post" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2015/12/01/First-Post/" class="article-date">
-  <time datetime="2015-12-01T20:39:15.000Z" itemprop="datePublished">2015-12-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/General/">General</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+      <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      Hexo - Blogging Platform for Developers
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/blog/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/blog/2016/07/11/Typescript-ES2015-and-Angular-2/" class="archive-article-date">
+  <time datetime="2016-07-11T20:38:04.000Z" itemprop="datePublished">Jul 11</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/blog/2016/07/11/Typescript-ES2015-and-Angular-2/">Typescript, ES2015 and Angular 2</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Welcome!">Welcome!</h2><p>I’ve done blogging before here and there with WordPress, Blogger, etc., but I don’t feel any of those old posts are relevant to my career or life in general anymore. So… goodbye old and hello new!</p>
-<p>I’m using <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>. Hexo is not just a blogging platform, it’s also a powerful static file generator which uses Node.js to generate content on your local machine, or where you choose to configure the generated content to deploy. Although not a traditional blogging platform such as WordPress, it’s very versatile and has loads of features.</p>
-<p>Once installed via NPM, creating a new blog post via command line is easy, like-a-so:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My First Blog Post!"</span></span><br></pre></td></tr></table></figure></p>
-<p>Hexo then creates a new source file within your hexo directory. With the default setup, Hexo creates these files in Markdown. No need to edit HTML. There are also configuration options to create files as Jade, Haml or Ejs.</p>
-<p>Example of post:<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">title: First Post</span><br><span class="line">date: 2015-12-01 13:15:15</span><br><span class="line">categories:</span><br><span class="line"><span class="bullet">- </span>Stuff</span><br><span class="line">tags:</span><br><span class="line"><span class="bullet">- </span>Cool Stuff</span><br><span class="line"><span class="header">- Other Cool Stuff</span><br><span class="line">---</span></span><br><span class="line"><span class="header">### Content</span></span><br><span class="line">Write stuff</span><br><span class="line"></span><br><span class="line"><span class="header">## Sub Content</span></span><br><span class="line">Write some more stuff</span><br></pre></td></tr></table></figure></p>
-<p>Once you’ve created your file and written up your post, you can generate the static files via:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
-<p>This will create files within your configured directory (mine is /public).<br>Then you can deploy this to Heroku or GitHub and voila! Since I have the GitHub repo for my site setup to trigger a Heroku deployment, this makes it super easy for me.</p>
-<p>Obviously, this is for the more tech savvy user who wants to blog. But once it’s setup, a couple of commands will do the trick.</p>
-<p>Anyway, I’ll be blogging about life, work, all things javascript, Front-End development, etc. so check back!</p>
-<p>Thanks for stopping by.<br>-Jon</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.thejonlynch.com/blog/2015/12/01/First-Post/" data-id="ciqiibcre0000mntx80seoj7t" class="article-share-link">Share</a>
-      
-        <a href="http://www.thejonlynch.com/blog/2015/12/01/First-Post/#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Node-js/">Node.js</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/blog/2015/12/08/NodeBots-JohnnyFive-The-Addictive-World-of-Javascript-Robotics/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          NodeBots &amp; Johnny-Five... The Addictive World of Javascript Robotics
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
-  
 </article>
-
-
-<section id="comments">
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </div>
-</section>
+  
+  
+    </div></section>
+  
 </section>
       
         <aside id="sidebar">
@@ -265,13 +223,11 @@
 <script>
   var disqus_shortname = 'jonlynch';
   
-  var disqus_url = 'http://www.thejonlynch.com/blog/2015/12/01/First-Post/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
