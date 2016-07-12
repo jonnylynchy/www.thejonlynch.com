@@ -18,7 +18,7 @@ widgets:
 - recent_posts
 
 # Miscellaneous
-google_analytics:
+google_analytics: UA-51701738-1    
 favicon: ../blog/favicon.png
 twitter:
 google_plus:
