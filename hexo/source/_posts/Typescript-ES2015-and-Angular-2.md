@@ -134,9 +134,6 @@ class SuperPerson extends Person {
 
 	// fat arrows using lexical this
 	delayedSuperPower(){
-		// setTimeout(function(){
-		// 	console.log(this.useSuperPower);
-		// }, 1000);
 
 		setTimeout(() => {
 			console.log(this.useSuperPower);
@@ -242,7 +239,7 @@ To get started, I would suggest downloading <a href="https://code.visualstudio.c
 
 Once you've done that, a run through the Angular team's <a href="https://angular.io/docs/ts/latest/tutorial/" target="_blank">Hero Tutorial</a> will get you familiar with components, services, directives, routing, and Http.
 
-The core of Angular 2 is components. Each Angular component is basically made up of a class that is exported (to be imported into other classes), with imports from the Angular framework, and ES7 decorators.
+The core of Angular 2 is components. Each Angular component is basically made up of a class that is exported (to be imported into other module/component), with imports from the Angular framework, and ES7 decorators.
 
 Consider the following simple example (my-app-component.ts):
 
