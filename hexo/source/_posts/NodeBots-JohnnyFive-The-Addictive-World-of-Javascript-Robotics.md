@@ -75,6 +75,13 @@ $ node node-test.js
 ```
 Voila! You should see a blinking LED. Pretty cool huh?
 
-I recently ordered this <a href="https://www.amazon.com/JavaScript-Robotics-Johnny-Five-Raspberry-BeagleBone/dp/1457186950/" target="_blank">book from Amazon</a> and am pretty pleased with the examples. There's a ton of cool stuff to build with Johnny-Five!
+If you want more information, I suggest visiting the <a href="http://johnny-five.io/" target="_blank">Johnny-Five</a> website, and checking out this <a href="https://www.amazon.com/JavaScript-Robotics-Johnny-Five-Raspberry-BeagleBone/dp/1457186950/" target="_blank">book I recently ordered</a>. There's a ton of cool stuff to build with Johnny-Five!
 
 ![JavaScript Robotics: Building NodeBots with Johnny-Five](https://images-na.ssl-images-amazon.com/images/I/51G1K%2BfEaoL._SX258_BO1,204,203,200_.jpg "Johnny-Five")
+
+Some team members at work and I got together for a Hackathon and made something pretty cool as a physical bot notification system for our scrum tool updates:
+{% youtube AGTd2Ms2j9I %}
+
+Until next time,
+
+**-Jon**
