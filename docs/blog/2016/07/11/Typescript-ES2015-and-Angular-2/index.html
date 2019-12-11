@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Typescript, ES2015 and Angular 2 | Jon Lynch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Mankind is capable of creating such marvelous beauty and magnificent destruction. Occasionally, a human being or two tap their inner-most creative and imaginative resources to create something so magn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Typescript, ES2015 and Angular 2">
+<meta property="og:url" content="http://www.thejonlynch.com/blog/2016/07/11/Typescript-ES2015-and-Angular-2/index.html">
+<meta property="og:site_name" content="Jon Lynch">
+<meta property="og:description" content="Mankind is capable of creating such marvelous beauty and magnificent destruction. Occasionally, a human being or two tap their inner-most creative and imaginative resources to create something so magn">
+<meta property="og:image" content="http://www.thejonlynch.com/blog/images/blog/angular.png">
+<meta property="og:updated_time" content="2016-07-12T03:52:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Typescript, ES2015 and Angular 2">
+<meta name="twitter:description" content="Mankind is capable of creating such marvelous beauty and magnificent destruction. Occasionally, a human being or two tap their inner-most creative and imaginative resources to create something so magn">
+  
+    <link rel="alternative" href="../blog/atom.xml" title="Jon Lynch" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="../blog/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-51701738-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+	<link rel="stylesheet" href="/css/reset.css" />
+	<link rel="stylesheet" href="/css/foundation.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Advent+Pro:400,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/css/style.css" />
+	<link rel="stylesheet" href="/css/mediaOverrides.css" />
+  <link rel="stylesheet" href="/blog/css/style.css" type="text/css">
+	<!--[if lt IE 10]>
+    <link rel="stylesheet" href="/css/ie.css" />
+    <![endif]-->
+	<script src="/scripts/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header>
+  <div id="headerBG"></div>
+  <div class="row">
+    <!-- Logo -->
+    <section class="five columns small" id="logo" >
+      <div></div>
+      <a href="/#home" id="firstNavItem">JON LYNCH</a>
+    </section>
+    <!-- Navigation -->
+    <div class="hide-for-small">
+      <nav class="seven columns">
+        <a href="/blog" class="active">Blog</a>
+        <a href="/#life">Life &amp; Stuff</a>
+        <a href="/#work">Work</a>
+        <a href="/#about">About</a>
+        <div class="clear"></div>
+      </nav>
+      <canvas id="navCanvas" width="940" height="10"></canvas>
+    </div>
+  </div>
+</header>
+
+    <div class="outer">
+      <section id="main"><article id="post-Typescript-ES2015-and-Angular-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2016/07/11/Typescript-ES2015-and-Angular-2/" class="article-date">
+  <time datetime="2016-07-11T20:38:04.000Z" itemprop="datePublished">2016-07-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Javascript/">Javascript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Typescript, ES2015 and Angular 2
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Mankind is capable of creating such marvelous beauty and magnificent destruction. Occasionally, a human being or two tap their inner-most creative and imaginative resources to create something so magnificent, so awe-inspiring, that it leaves us speechless.<br><cite>Me (or no one ever)</cite></p>
+</blockquote>
+<p>Okay, so no one actually said that, but you get the point right? Maybe this isn’t as an incredible revelation as all that, but it’s still pretty cool.</p>
+<p>Ladies and Gentlemen, if you have not familiarized yourself with the world of Angular2, Typescript and ES2015, please allow me to introduce them to you!</p>
+<h3 id="Typescript">Typescript</h3><p>So what is Typescript? The official Typescript website states:</p>
+<blockquote>
+<p>TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.</p>
+</blockquote>
+<p>Yeah, pretty much that. It’s a pre-compilation version of Javascript that allows you to type just about anything. Objects, variables, return types, etc. can all be strongly typed. You can use built in types of the common variety such as:</p>
+<ul>
+<li>Boolean</li>
+<li>Number</li>
+<li>String</li>
+<li>Array</li>
+<li>Tuple</li>
+<li>Enum</li>
+<li>Any</li>
+<li>Void</li>
+</ul>
+<p>To a Javascript developer, some of these are not so common actually. Having the ability to use Tuples, Enums and “Any” is pretty powerful. In addition to these, you can also create your own types just as in any modern object-oriented programming language.</p>
+<p>Along with all this type awesomeness, you also have a few things not really available to the common JS runtime:</p>
+<ul>
+<li>Interfaces</li>
+<li>Generics</li>
+<li>Union Types (where type can be either or)</li>
+</ul>
+<p>Now if you’ve been following the development of the newest versions of Javascript, you could probably just skip this next section. If you haven’t, check it out.</p>
+<h3 id="ES2015_(AKA_ES6)">ES2015 (AKA ES6)</h3><p>I’m not going to bore you with the details of TC39, the process of formalizing these specs and so on, but you should google those things if you’re interested.</p>
+<p>I’ve got an example repo set up on GitHub that wasn’t really super complete, but you can see some basic examples of some of the newer features of ES2015 here: <a href="https://github.com/jonnylynchy/es6-fun/tree/master/src/js" target="_blank" rel="external">https://github.com/jonnylynchy/es6-fun/tree/master/src/js</a></p>
+<p>I’ll highlight a few of those.</p>
+<h4 id="Classes">Classes</h4><p>Here’s a “plain” old Javascript class with a couple methods.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	<span class="comment">// Defaults</span></span><br><span class="line">	name = <span class="string">''</span>;</span><br><span class="line">	friends = [];</span><br><span class="line">	type = <span class="string">'normal'</span>;</span><br><span class="line">	strength = <span class="string">'average'</span>;</span><br><span class="line"></span><br><span class="line">	constructor(name) &#123;</span><br><span class="line">		<span class="comment">// whatever you want to do here on initialization</span></span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	printFriends()&#123;</span><br><span class="line">		<span class="comment">// Lexicle this (remember all that _this = this nonsense?)</span></span><br><span class="line">		<span class="comment">// Also notice the '=&gt;'? That's the fat arrow</span></span><br><span class="line">		<span class="keyword">this</span>.friends.forEach(f =&gt; <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">" knows "</span> + f));</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	addFriend(friend)&#123;</span><br><span class="line">		<span class="keyword">this</span>.friends.push(friend);</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>That was pretty cool right? Under the hood, this is all still using prototypal inheritance, but now we can make sense of it all in a clear, object-oriented approach.</p>
+<p>Some have criticized this approach as a cheap way to emulate other C-type languages. Personally, I love it. Javascript has always been a little hard to grasp once you start prototyping and getting into complex structures.</p>
+<blockquote>
+<p>Okay, that’s nice but how does Typescript play into this?</p>
+</blockquote>
+<p>So excited you asked. Let’s type that bad boy!</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	<span class="comment">// Defaults</span></span><br><span class="line">	name:string = <span class="string">''</span>;</span><br><span class="line">	friends:Person[] = [];</span><br><span class="line">	type:string = <span class="string">'normal'</span>;</span><br><span class="line">	strength:string = <span class="string">'average'</span>;</span><br><span class="line"></span><br><span class="line">	constructor(name:string) &#123;</span><br><span class="line">		<span class="comment">// whatever you want to do here on initialization</span></span><br><span class="line">		<span class="keyword">this</span>.name = name;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	printFriends()&#123;</span><br><span class="line">		<span class="comment">// Lexicle this (remember all that _this = this nonsense?)</span></span><br><span class="line">		<span class="comment">// Also notice the '=&gt;'? That's the fat arrow</span></span><br><span class="line">		<span class="keyword">this</span>.friends.forEach(f =&gt; <span class="built_in">console</span>.log(<span class="keyword">this</span>.name + <span class="string">" knows "</span> + f));</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	addFriend(friend:Person)&#123;</span><br><span class="line">		<span class="keyword">this</span>.friends.push(friend);</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>See how we typed all the properties of this class? Did you notice how the friends array was not only a typed array, but of type Person? We just defined what a Person is and it’s still valid Typescript!</p>
+<p>We could have gone further and defined some Enums to set our type and strength properties of Person, but for this simple example a string suffices.</p>
+<p>Now, lets extend that class (a standard ES2015 feature).</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SuperPerson</span> <span class="keyword">extends</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">	constructor(args) &#123;</span><br><span class="line">		<span class="comment">// lexical this</span></span><br><span class="line">		<span class="keyword">super</span>(args);</span><br><span class="line">		<span class="keyword">this</span>.type = <span class="string">'definitely not normal'</span>;</span><br><span class="line">		<span class="keyword">this</span>.strength = <span class="string">'super human'</span>;</span><br><span class="line">		<span class="keyword">this</span>.useSuperPower = <span class="string">'I just crushed beer cans with my bare hands!'</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// fat arrows using lexical this</span></span><br><span class="line">	delayedSuperPower()&#123;</span><br><span class="line"></span><br><span class="line">		setTimeout(() =&gt; &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="keyword">this</span>.useSuperPower);</span><br><span class="line">		&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Here’s where the traditional Javascript developer will start thinking about prototypal inheritance. SuperPerson is inheriting from and extending Person. Nice, TC39. Nice.</p>
+<p>Along with extending your classes, you can extend built in objects as well. Again, another existing feature in JS with prototype, but we now have a different way to write it.</p>
+<p>I’ll hit one more ES2015 example before moving on.</p>
+<h4 id="let_vs_var">let vs var</h4><p>The keyword ‘let’ allows us to have true blockscoping.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Old school</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">varTest</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> thisThing = <span class="string">'foo'</span>;</span><br><span class="line">	<span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">		<span class="keyword">var</span> thisThing = <span class="string">'bar'</span>;</span><br><span class="line">		<span class="built_in">console</span>.log(thisThing);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">console</span>.log(thisThing); <span class="comment">// bar</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Let</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">letTest</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> thisThing = <span class="string">'foo'</span>;</span><br><span class="line">	<span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">		<span class="keyword">let</span> thisThing = <span class="string">'bar'</span>;</span><br><span class="line">		<span class="built_in">console</span>.log(thisThing);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// BLOCK SCOPE!!!</span></span><br><span class="line">	<span class="built_in">console</span>.log(thisThing); <span class="comment">// foo</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Another convenient feature. Sweetness.</p>
+<p>ES2015 is full of features I could go on about in detail including:</p>
+<ul>
+<li>Arrow Functions</li>
+<li>Default Parameters</li>
+<li>Rest Parameters</li>
+<li>Spread Operator</li>
+<li>String Interpolation</li>
+<li>Unicode Strings</li>
+<li>Module (import, export)</li>
+<li>Iterators</li>
+<li>Generators</li>
+<li>etc. etc. etc.</li>
+</ul>
+<h4 id="Compiling_ES2015">Compiling ES2015</h4><p>Of course, to use most of what’s included in ES2015 in a wide array of browsers, you’ll need a transpiler of some sort. This is because not every browser is able to interpret ES2015. <a href="http://kangax.github.io/compat-table/es6/" target="_blank">Support is really coming along though</a>.</p>
+<p>Believe it or not the top desktop browser in this area is Safari 10. It supports 100% of ES2015. 100%!</p>
+<p>A transpiler is sort of what it sounds like. It translates/compiles your modern Javascript to a lower version to be interpretable by javascript engines.</p>
+<p>The most popular Transpiler right now is <a href="https://babeljs.io/" target="_blank">Babel</a>. It’s pretty easy to configure and use.</p>
+<p>However, if you’re going to use Typescript, it does it’s own transpiling. You’ll need the Typescript CLI, or the Typescript extensions for Visual Studio if you’re on Windows.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g typescript</span><br></pre></td></tr></table></figure>
+<p>Typescript has configurations for how it transpiles, where to place the distributed files, supported types, etc. usually stored in a .tsconfig file. There’s plenty more to learn about it. By default it transpiles down to ES5.</p>
+<p>Once you have a file with Typescript, it’s as easy as:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tsc your-awesome-typescript-file.ts</span><br></pre></td></tr></table></figure>
+<p>For more information on Typescript, visit the official Typescript website: <a href="https://www.typescriptlang.org/" target="_blank" rel="external">https://www.typescriptlang.org/</a></p>
+<p>To learn more about transpiling ES2015 and beyond, visit <a href="https://babeljs.io/" target="_blank" rel="external">https://babeljs.io/</a></p>
+<h3 id="Angular_2">Angular 2</h3><p>Okay, on to the star of the show, Angular 2.</p>
+<p><img src="/images/blog/angular.png" alt="Angular 2" title="Angular 2"></p>
+<p>I embraced Angular. While the whole $scope thing can be a little confusing at first, it makes for a great way to write single page applications. With it’s dependency injection, clever scoping pattern, services and directives, it made writing SPAs modular and gave you a framework you could leverage. Angular 1 is far from dead, but any day now Angular 2 is going to be in full release mode. As of this post, Angular 2 is in RC4.</p>
+<blockquote>
+<p>So if Angular 1 is far from dead, why Angular 2?</p>
+</blockquote>
+<p>Great question! One word: <strong>ES2015</strong>!</p>
+<p>Okay, that’s not one word, and it’s actually a crap-ton more than that. Modules, better dependency injection, better testability, code completion in more text editors, templates for views, better routing, Angular on the server via Angular Universal, Native mobile apps, much better performance overall, on and on and on.</p>
+<p>While you can develop Angular 2 in pretty much any text editor and with plain-jane ES2015 and transpile via babeljs, IMHO it’s best to use Typescript and a text editor with Typescript support. Atom has good Typescript support, but Visual Studio Code is basically built for it. Either will give you great code completion support, but the former will need a plugin.</p>
+<p>To get started, I would suggest downloading <a href="https://code.visualstudio.com/download" target="_blank">Visual Studio Code</a> and going through the <a href="https://angular.io/docs/ts/latest/quickstart.html" target="_blank">5 Minute Quickstart for Typescript.</a></p>
+<p>Once you’ve done that, a run through the Angular team’s <a href="https://angular.io/docs/ts/latest/tutorial/" target="_blank">Hero Tutorial</a> will get you familiar with components, services, directives, routing, and Http.</p>
+<p>The core of Angular 2 is components. Each Angular component is basically made up of a class that is exported (to be imported into other module/component), with imports from the Angular framework, and ES7 decorators.</p>
+<p>Consider the following simple example (my-app-component.ts):</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Component &#125; <span class="keyword">from</span> <span class="string">'@angular/core'</span>;</span><br><span class="line"></span><br><span class="line">@Component(&#123;</span><br><span class="line">	selector: <span class="string">'my-app-component'</span>,</span><br><span class="line">	template: <span class="string">`</span><br><span class="line">		&lt;h2&gt;My Component&lt;/h2&gt;</span><br><span class="line">		&lt;p&gt;&#123;&#123; myLocalComponentVar &#125;&#125;&lt;/p&gt;</span><br><span class="line">	`</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="keyword">export</span> <span class="class"><span class="keyword">class</span> <span class="title">MyAppComponent</span> </span>&#123;</span><br><span class="line">	myLocalComponentVar: string = <span class="string">'This is my component.'</span>;</span><br><span class="line"></span><br><span class="line">	constructor() &#123;&#125;</span><br><span class="line"></span><br><span class="line">	ngOnInit() &#123;</span><br><span class="line">		<span class="comment">// anything you want to put here on initialization</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	myComponentMethod() &#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">'This is from my component!'</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="@Component">@Component</h4><p>The <em>@Component</em> symbol just above the class declaration is a decorator. It’s passed a meta-data object that tells Angular some basic things about this component.</p>
+<h4 id="selector">selector</h4><p>The <em>selector</em> property is the html tag that Angular will use to render the component. Once your app is Bootstrapped, Angular will render the component within that tag. That tag can be placed in another component’s template, or rendered in the initial view if this component is included in the original html document when bootstrapped.</p>
+<h4 id="template">template</h4><p>The <em>template</em> property contains the markup that is going to be rendered into the DOM at runtime. Notice that we’re using the backtick character to open and close the template.</p>
+<p>You can specify a <em>templateUrl</em> instead if you don’t want to clutter up your components:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Component(&#123;</span><br><span class="line">	selector: <span class="string">'my-app-component'</span>,</span><br><span class="line">	templateUrl: <span class="string">'my-app-component.html'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Then in <em>my-app-component.html</em>, you would add your markup there:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">h2</span>&gt;</span>My Component<span class="tag">&lt;/<span class="title">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">p</span>&gt;</span>&#123;&#123; myLocalComponentVar &#125;&#125;<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Those are the basics of a component which is the root piece of Angular 2.</p>
+<p>Obviously there’s a lot more to learn before you can really start developing apps with Angular 2, but if you follow the <a href="https://angular.io/docs/ts/latest/quickstart.html" target="_blank">Quickstart</a>, and run through the <a href="https://angular.io/docs/ts/latest/tutorial/" target="_blank">Hero Tutorial</a>, you’ll be on your way to developing Angular 2 apps in no time.</p>
+<h3 id="Conclusion">Conclusion</h3><p>I’m developing a couple of apps in Angular 2 at the moment. I’ll be updating my blog with Angular 2 gotchas, tips, and other things I find from my anything I learn.</p>
+<p><strong><em>– Jon</em></strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.thejonlynch.com/blog/2016/07/11/Typescript-ES2015-and-Angular-2/" data-id="ciqjzphlt0007dgtxtyjuybjk" class="article-share-link">Share</a>
+      
+        <a href="http://www.thejonlynch.com/blog/2016/07/11/Typescript-ES2015-and-Angular-2/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Angular2/">Angular2</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/ES2015/">ES2015</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Typescript/">Typescript</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2015/12/08/NodeBots-JohnnyFive-The-Addictive-World-of-Javascript-Robotics/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">NodeBots &amp; Johnny-Five... The Addictive World of Javascript Robotics</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+      
+        <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/General/">General</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Javascript/">Javascript</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Angular/">Angular</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Angular2/">Angular2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ES2015/">ES2015</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Javascript/">Javascript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Node-js/">Node.js</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Robotics/">Robotics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Typescript/">Typescript</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Angular/" style="font-size: 10px;">Angular</a> <a href="/blog/tags/Angular2/" style="font-size: 10px;">Angular2</a> <a href="/blog/tags/ES2015/" style="font-size: 10px;">ES2015</a> <a href="/blog/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/blog/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/blog/tags/Node-js/" style="font-size: 20px;">Node.js</a> <a href="/blog/tags/Robotics/" style="font-size: 10px;">Robotics</a> <a href="/blog/tags/Typescript/" style="font-size: 10px;">Typescript</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/12/">December 2015</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2016/07/11/Typescript-ES2015-and-Angular-2/">Typescript, ES2015 and Angular 2</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2015/12/08/NodeBots-JohnnyFive-The-Addictive-World-of-Javascript-Robotics/">NodeBots &amp; Johnny-Five... The Addictive World of Javascript Robotics</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2015/12/01/First-Post/">Hexo - Blogging Platform for Developers</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <!-- Footer -->
+<footer>
+  <div class="row">
+    <div class="twelve columns">
+      <br /><br />
+      <p>
+        <div class="left">
+          <h5 class="subheader">Connect with me:</h5>
+          <div id="footer-info" class="inner">
+            &copy; 2016 Jon Lynch<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+          </div>
+        </div>
+        <div class="right">
+          <h5 class="subheader">
+            <a href="http://www.linkedin.com/in/jonclynch/" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a>&nbsp;
+            <a href="https://github.com/jonnylynchy" target="_blank"><i class="fa fa-github fa-2x"></i></a>&nbsp;
+            <a href="https://twitter.com/jonlynch" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>&nbsp;
+          </h5>
+        </div>
+        <div class="clear"></div>
+      </p>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer" class="show-for-small"></div>
+	<nav id="mobile-nav" class="show-for-small">
+		<a id="mobile-nav-toggle">
+			<span class="mobile-nav-toggle-bar"></span>
+			<span class="mobile-nav-toggle-bar"></span>
+			<span class="mobile-nav-toggle-bar"></span>
+		</a>
+		<div>
+			<ul>
+				<li>
+					<a href="/#about">About</a>
+				</li>
+				<li>
+					<a href="/#work">Work</a>
+				</li>
+				<li>
+					<a href="/#life">Life &amp; Stuff</a>
+				</li>
+				<li>
+					<a href="/blog">Blog</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+  <!-- <nav id="mobile-nav">
+  
+    <a href="/blog/../" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/../blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav> -->
+  
+<script>
+  var disqus_shortname = 'jonlynch';
+  
+  var disqus_url = 'http://www.thejonlynch.com/blog/2016/07/11/Typescript-ES2015-and-Angular-2/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/../blog/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/blog/../blog/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+<script src="/scripts/CanvasNavAnimation.js"></script>
+<script src="/scripts/scripts.js"></script>
+<script src="/blog/../blog/js/script.js" type="text/javascript"></script>
+
+</body>
+</html>
